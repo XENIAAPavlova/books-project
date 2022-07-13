@@ -1,11 +1,12 @@
 // import logo from "./Bookverse_logo.svg";
 import "./App.css";
+import Main from "./Main";
 
 function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>Bookverse App</h1>
+        <Main />
       </div>
       <footer>
         This is an open-source code by{" "}
