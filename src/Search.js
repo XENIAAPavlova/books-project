@@ -1,6 +1,6 @@
 import React from "react";
-import "./Main.css";
+import "./Search.css";
 
-export default function Main() {
+export default function Search() {
   return <div className="main">Hello from Main</div>;
 }
