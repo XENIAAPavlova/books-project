@@ -5,7 +5,7 @@ import Search from "./Search";
 function App() {
   return (
     <div className="App">
-      <nav className="navbar navbar-expand-lg navbar-light ps-5 mt-3">
+      <nav className="navbar navbar-expand-lg navbar-light ps-5 pe-5 mt-3">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             <img src={logo} alt="logo" width="60" height="60" />
