@@ -1,5 +1,6 @@
 import React from "react";
 import "./Search.css";
+// import Intro from "./Intro";
 
 export default function Search() {
   return (
@@ -17,6 +18,7 @@ export default function Search() {
           </button>
         </div>
       </form>
+      {/* <Intro /> */}
     </div>
   );
 }

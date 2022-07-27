@@ -1,6 +1,7 @@
 import logo from "./Bookverse_logo.svg";
 import "./App.css";
 import Search from "./Search";
+import Intro from "./Intro";
 
 function App() {
   return (
@@ -84,6 +85,7 @@ function App() {
         <br />
         <main>
           <Search />
+          <Intro />
         </main>
         <footer className="App-footer">
           <small>
