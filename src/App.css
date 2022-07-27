@@ -1,5 +1,5 @@
 :root {
-  --main-background-color: #e5ccb8;
+  --main-background-color: #f3e6dd;
   --second-background-color: #fcfbfa;
   --main-text-color: #131045;
   --details-light-color: #f0bbe3;
@@ -8,17 +8,18 @@
   --text-dark-color: #3b2f4a;
   --input-color: #c2a792;
   --ratings-color: #eaa451;
-  --card-color: #413b88;
+  --card-color: #c2a792;
+  --pic-color: #413b88;
   --social-links-color: #658abf;
 
   --font-family: "Poppins", sans-serif;
-  /* --big-font-size: 2rem;
+  --big-font-size: 2rem;
   --h1-font-size: 45px;
   --h2-font-size: 24px;
   --h3-font-size: 22px;
   --details-font-size: 20px;
   --btn-size: 22px;
-  --social-links-size: 30px; */
+  --social-links-size: 30px;
 }
 
 .App {
