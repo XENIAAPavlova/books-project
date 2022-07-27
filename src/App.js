@@ -31,7 +31,7 @@ function App() {
               </li>
               <li className="nav-item">
                 <a className="nav-link px-5" href="#">
-                  Tranding
+                  Trending
                 </a>
               </li>
               <li className="nav-item dropdown">
@@ -83,10 +83,12 @@ function App() {
       </nav>{" "} */}
       <div className="container">
         <br />
-        <main>
+        <section>
           <Search />
+        </section>
+        <section>
           <Intro />
-        </main>
+        </section>
         <footer className="App-footer">
           <small>
             This is an open-source code by{" "}
