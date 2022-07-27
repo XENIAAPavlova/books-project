@@ -1,2 +1,8 @@
 /* .form-control .shadow-sm {
 } */
+
+.search-button .btn {
+  background-color: #c2a792;
+  color: var(--second-background-color);
+  font-size: var(--h3-font-size);
+}

@@ -4,6 +4,17 @@
 }
 
 .card-title {
-  color: var(--main-text-color);
+  color: var(--pic-color);
   font-size: 45px;
+  font-weight: 500;
+}
+
+.card-button .btn {
+  background-color: #c2a792;
+  color: var(--second-background-color);
+  font-size: var(--h3-font-size);
+}
+
+.card-text {
+  color: var(--alt-text-color);
 }
