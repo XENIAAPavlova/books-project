@@ -10,15 +10,16 @@ export default function Search() {
           <input className="form-control shadow-sm" type="search" />
         </div>
         <div className="col-2">
-          <button
-            type="submit"
-            className=" btn btn-light shadow-sm justify-content-md-end"
-          >
-            Search
-          </button>
+          <div className="search-button">
+            <button
+              type="submit"
+              className=" btn shadow-sm justify-content-md-end"
+            >
+              Search
+            </button>
+          </div>
         </div>
       </form>
-      {/* <Intro /> */}
     </div>
   );
 }
