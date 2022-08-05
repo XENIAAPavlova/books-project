@@ -4,7 +4,7 @@ import "./Intro.css";
 export default function Intro() {
   return (
     <div className="row justify-content-center">
-      <div className="col-9">
+      <div className="col-12">
         <div className="card shadow rounded-2 mb-5 mt-5 border-0">
           <div className="row justify-content-center">
             <div className="col-lg-6">
