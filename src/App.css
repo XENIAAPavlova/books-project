@@ -27,12 +27,12 @@
   color: var(--text-details-color);
 }
 
-.App-logo {
+/* .App-logo {
   text-align: start;
   max-width: 130px;
   margin: 0 auto;
   display: block;
-}
+} */
 
 .App-footer {
   text-align: center;
@@ -41,4 +41,10 @@
 
 .navbar-light .navbar-nav .nav-link {
   color: var(--text-details-color);
+}
+
+.random-text {
+  color: var(--alt-text-color);
+  font-size: 16px;
+  font-weight: 600;
 }

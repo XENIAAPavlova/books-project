@@ -1,15 +1,16 @@
 import logo from "./Bookverse_logo.svg";
 import "./App.css";
-import Search from "./Search";
+import Explore from "./Explore";
 import Intro from "./Intro";
+import Random from "./Random";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <nav className="navbar navbar-expand-lg navbar-light ps-5 pe-5 mt-3">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            <img src={logo} alt="logo" width="60" height="60" />
+            <img src={logo} alt="logo" width="75" height="75" />
           </a>
           <button
             className="navbar-toggler"
@@ -73,25 +74,21 @@ function App() {
           </div>
         </div>
       </nav>
-
-      {/* <nav className="navbar navbar-light mt-3">
-        <div className="container">
-          <a className="navbar-brand" href="#">
-            <img src={logo} alt="logo" width="60" height="60" />
-          </a>
-        </div>
-      </nav>{" "} */}
       <div className="container">
         <br />
         <section>
-          <Search />
+          <Explore />
         </section>
         <section>
           <Intro />
         </section>
+        <p className="random-text">Random picks</p>
+        <section>
+          <Random />
+        </section>
         <footer className="App-footer">
           <small>
-            This is an open-source code by{" "}
+            This is an open-source code by
             <a
               href="https://www.linkedin.com/in/ksenya-pavlova-k/"
               target="blank"
@@ -105,5 +102,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
