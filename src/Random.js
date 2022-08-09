@@ -3,46 +3,6 @@ import "./Random.css";
 
 export default function Random() {
   return (
-    // <div className="row justify-content-center">
-    //   <div className="col-9">
-    //     <div className="card shadow rounded-2 mb-5 mt-5 border-0">
-    //       <div className="row justify-content-center">
-    //         <div className="col-lg-3">
-    //           <div className="card-body text-start">
-    //             <div class="card">
-    //               <div class="card-body-picks">
-    //                 This is some text within a card body.
-    //               </div>
-    //             </div>
-    //           </div>
-    //         </div>
-    //         <div className="col-lg-3">
-    //           <div className="card-body text-start">
-    //             <div class="card">
-    //               <div class="card-body-picks">
-    //                 This is some text within a card body. This is some text
-    //                 within a card body. This is some text within a card body.
-    //                 This is some text within a card body. This is some text
-    //                 within a card body. This is some text within a card body.
-    //                 This is some text within a card body.
-    //               </div>
-    //             </div>
-    //           </div>
-    //         </div>
-    //         <div className="col-lg-3">
-    //           <div className="card-body text-start">
-    //             <div class="card">
-    //               <div class="card-body-picks">
-    //                 This is some text within a card body.
-    //               </div>
-    //             </div>
-    //           </div>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
-
     <div className="row justify-content-center mb-5">
       <div className="col-4 mb-5 mt-4">
         <div className="card border-0 h-100 box-shadow">
