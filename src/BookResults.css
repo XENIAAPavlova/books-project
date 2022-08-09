@@ -1,0 +1,18 @@
+.card-results {
+  background-color: var(--main-background-color);
+  font-family: var(--font-family);
+  color: var(--pic-color);
+}
+
+.card-author {
+  font-weight: 600;
+  color: var(--main-text-color);
+}
+
+.card-book {
+  color: var(--pic-color);
+}
+
+.card-body-book {
+  background: var(--input-color);
+}
