@@ -67,26 +67,8 @@ export default function App() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  My Books
+                  My Collection
                 </a>
-                <ul
-                  className="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Favorites
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#"></a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Saved for later
-                    </a>
-                  </li>
-                </ul>
               </li>
               <li className="nav-item">
                 <a className="nav-link px-5" href="#">
@@ -126,17 +108,45 @@ export default function App() {
           <Intro />
         </section>
         <section>
-          <BookResults results={results} />
+          <BookResults results={results.slice(0, 4)} />
         </section>
         <p className="random-text">Random picks</p>
         <section>
-          <Random />
+          <BookResults
+            results={[
+              {
+                key: "/works/OL5735363W",
+                title: "The Hunger Games",
+                cover_i: 12646545,
+                author_name: ["Suzanne Collins"],
+              },
+              {
+                key: "/works/OL3140834W",
+                title: "To Kill a Mockingbird",
+                cover_i: 12606502,
+                author_name: ["Harper Lee"],
+              },
+              {
+                key: "/works/OL5819456W",
+                title: "The Book Thief",
+                cover_i: 8310846,
+                author_name: ["Markus Zusak"],
+              },
+              {
+                key: "/works/OL25073891W",
+                title: "Of Human Bondage",
+                cover_i: 11996470,
+                author_name: ["W. Somerset Maugham"],
+              },
+            ]}
+          />
+          {/* <Random results={results} /> */}
         </section>
         <footer className="App-footer">
           <small>
             This is an open-source code by
             <a
-              href="https://www.linkedin.com/in/ksenya-pavlova-k/"
+              href="https://github.com/XENIAAPavlova"
               target="blank"
               rel="noreferrer"
             >
