@@ -3,14 +3,15 @@ import "./App.css";
 import "./Explore.css";
 
 import logo from "./Bookverse_logo.svg";
+import { Link } from "react-router-dom";
 
 export default function Navigation() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light ps-5 pe-5 mt-3">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           <img src={logo} alt="logo" width="75" height="75" />
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -25,14 +26,14 @@ export default function Navigation() {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav mx-auto">
             <li className="nav-item">
-              <a className="nav-link px-5" aria-current="page" href="#">
+              <Link className="nav-link px-5" to="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link px-5" href="#">
+              <Link className="nav-link px-5" to="/trending">
                 Trending
-              </a>
+              </Link>
             </li>
             <li className="nav-item dropdown">
               <a
