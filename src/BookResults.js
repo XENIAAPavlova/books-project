@@ -8,7 +8,7 @@ export default function BookResults(props) {
         <div className="col-12">
           <div className="card-results shadow rounded-3 mb-5 mt-5 border-2">
             <div className="row justify-content-center">
-              {props.results.slice(0, 4).map(function (book, i) {
+              {props.results.map(function (book, i) {
                 let authors = [];
                 if (book.author_name) {
                   authors = book.author_name;
@@ -21,13 +21,15 @@ export default function BookResults(props) {
 
                 return (
                   <div className="col-lg-3" key={i}>
-                    <div
-                      className="card-main mb-5 mt-5 text-center"
-                      // style={{ width: "10rem" }}
-                    >
-                      <img src={cover} className="card-img-top" alt="..." />
+                    <div className="card-main mb-5 mt-5 text-center">
+                      <img
+                        src={cover}
+                        id="card-top"
+                        className="card-img-top"
+                        alt="..."
+                      />
                       <div className="card-body-book">
-                        <p className="card-book mb-2 mt-2">{book.title}</p>
+                        <p className="card-book mb-2 mt-4">{book.title}</p>
                         <p className="card-author mt-3">
                           by {authors.join(", ")}
                         </p>
@@ -37,14 +39,16 @@ export default function BookResults(props) {
                               className="add-button btn mb-3 me-2"
                               type="button"
                             >
-                             Add to collection
+                              Add to collection
                             </button>
-                            <button
+                            <a
+                              href={`https://openlibrary.org/${book.key}`}
+                              target="_blank"
                               className="learn-more-button btn mb-3"
                               type="button"
                             >
                               Learn more
-                            </button>
+                            </a>
                           </div>
                         </div>
                       </div>
