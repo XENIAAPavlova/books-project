@@ -6,7 +6,7 @@ export default function BookResults(props) {
     return (
       <div className="row justify-content-center">
         <div className="col-12">
-          <div className="card-results shadow rounded-2 mb-5 mt-5 border-0">
+          <div className="card-results shadow rounded-3 mb-5 mt-5 border-2">
             <div className="row justify-content-center">
               {props.results.slice(0, 4).map(function (book, i) {
                 let authors = [];
@@ -14,27 +14,39 @@ export default function BookResults(props) {
                   authors = book.author_name;
                 }
 
-                let cover = "soory no img";
+                let cover = "/no_cover_pic.png";
                 if (book.cover_i) {
-                  cover = book.cover_i;
+                  cover = `https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`;
                 }
 
                 return (
                   <div className="col-lg-3" key={i}>
                     <div
-                      className="card mb-5 mt-5 text-center"
+                      className="card-main mb-5 mt-5 text-center"
                       // style={{ width: "10rem" }}
                     >
-                      <img
-                        src={`https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`}
-                        className="card-img-top"
-                        alt="..."
-                      />
+                      <img src={cover} className="card-img-top" alt="..." />
                       <div className="card-body-book">
                         <p className="card-book mb-2 mt-2">{book.title}</p>
                         <p className="card-author mt-3">
                           by {authors.join(", ")}
                         </p>
+                        <div className="row">
+                          <div className="col-sm-12 text-center">
+                            <button
+                              className="add-button btn mb-3 me-2"
+                              type="button"
+                            >
+                             Add to collection
+                            </button>
+                            <button
+                              className="learn-more-button btn mb-3"
+                              type="button"
+                            >
+                              Learn more
+                            </button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
