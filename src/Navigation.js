@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.css";
+import "./Explore.css";
+
 import logo from "./Bookverse_logo.svg";
 
 export default function Navigation() {
