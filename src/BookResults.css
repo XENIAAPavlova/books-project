@@ -14,5 +14,24 @@
 }
 
 .card-body-book {
-  background: var(--input-color);
+  background: #f3e6dd;
 }
+
+.card-img-top {
+  border-radius: 20px;
+}
+
+.card-body-book {
+  border-radius: 8px;
+}
+
+
+.add-button {
+  background-color: #c2a792;
+  color: var(--second-background-color);
+  font-size: var(--h3-font-size);
+}
+
+.learn-more-button {  background-color: #c2a792;
+  color: var(--second-background-color);
+  font-size: var(--h3-font-size);}
