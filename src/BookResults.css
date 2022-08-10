@@ -25,13 +25,20 @@
   border-radius: 8px;
 }
 
-
 .add-button {
   background-color: #c2a792;
   color: var(--second-background-color);
   font-size: var(--h3-font-size);
 }
 
-.learn-more-button {  background-color: #c2a792;
+.learn-more-button {
+  background-color: #c2a792;
   color: var(--second-background-color);
-  font-size: var(--h3-font-size);}
+  font-size: var(--h3-font-size);
+}
+
+#card-top {
+  /* height: 20vw; */
+  width: 100%;
+}
+
