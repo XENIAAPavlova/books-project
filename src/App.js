@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Trending from "./Trending";
-import MyCollection from "./MyCollection";
 import Navigation from "./Navigation";
 import Home from "./Home";
+import MyCollection from "./MyCollection";
 
 import "./App.css";
-import logo from "./Bookverse_logo.svg";
 
 export default function App() {
   return (
@@ -17,10 +16,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/trending" element={<Trending />} />
-          <Route path="" />
+          <Route path="/myCollection" element={<MyCollection />} />
         </Routes>
       </BrowserRouter>
-
 
       <footer className="App-footer">
         <small>
