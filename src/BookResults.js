@@ -44,6 +44,7 @@ export default function BookResults(props) {
                             <a
                               href={`https://openlibrary.org/${book.key}`}
                               target="_blank"
+                              rel="noreferrer"
                               className="learn-more-button btn mb-3"
                               type="button"
                             >

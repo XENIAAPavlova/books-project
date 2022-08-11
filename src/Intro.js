@@ -30,7 +30,7 @@ export default function Intro() {
               <img
                 src="/Reading 4.png"
                 className="img-fluid float-end rounded-start"
-                alt="card-picture"
+                alt="card"
               />
             </div>
           </div>

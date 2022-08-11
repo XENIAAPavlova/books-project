@@ -36,21 +36,19 @@ export default function Navigation() {
               </Link>
             </li>
             <li className="nav-item dropdown">
-              <a
+              <Link
                 className="nav-link px-5"
-                href="#"
+                to="/myCollection"
                 id="navbarDropdownMenuLink"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 My Collection
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link px-5" href="#">
-                Quotes
-              </a>
+              <a className="nav-link px-5">Quotes</a>
             </li>
           </ul>
         </div>
