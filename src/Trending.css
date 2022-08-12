@@ -2,3 +2,15 @@
   background-color: #7e6a80;
   color: #fcfbfa;
 }
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+#random-book {
+border-radius: 4px;
+  max-width: 100%;
+  max-height: 300px;
+  width: 175px;
+}

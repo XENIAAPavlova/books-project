@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Audio, Circles } from "react-loader-spinner";
+
 import axios from "axios";
 import "./Trending.css";
 
@@ -15,59 +17,68 @@ export default function Trending() {
   if (ready) {
     return (
       <div className="container ">
-        {results.slice(0, 10).map(function (book, i) {
-          console.log("hello");
-          console.log(book);
+        <div className="row">
+          {results.slice(0, 6).map(function (book, i) {
+            console.log("hello");
+            console.log(book);
 
-          let cover = "/no_cover_pic.png";
-          if (book.cover_i) {
-            cover = `https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`;
-          }
+            let cover = "/no_cover_pic.png";
+            if (book.cover_i) {
+              cover = `https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`;
+            }
 
-          return (
-            <div className="card mb-3 mt-5" key={i}>
-              <div className="row g-0">
-                <div className="col-md-4">
+            return (
+              <div className="col-md-2" key={i}>
+                <div className="card-main mb-5 mt-5 text-center">
                   <img
                     src={cover}
-                    className="img-fluid rounded-start"
+                    id="card-top"
+                    className="card-img-top"
                     alt="..."
                   />
-                </div>
-                <div className="col-md-8">
-                  <div className="card-body">
-                    <h5 className="card-title">{book.author_name}</h5>
-                    <p className="card-text">{book.title}</p>
-                    <div className="row">
-                      <div className="col-5">
-                        <button
-                          id="trending-button"
-                          type="submit"
-                          className="btn shadow-sm justify-content-md-end"
-                        >
-                          Learn more
-                        </button>
-                      </div>
-                      <div className="col-5">
-                        <button
-                          id="trending-button"
-                          type="submit"
-                          className="btn shadow-sm justify-content-md-end"
-                        >
-                          Add
-                        </button>
-                      </div>
-                    </div>
+                  <p className="card-book mb-2 mt-4">{book.title}</p>
+                  <p className="card-author mt-3">
+                    by {book.author_name.join(", ")}
+                  </p>
+                  <div className="col-md-12 text-center">
+                    <button className="add-button btn mb-3 me-2" type="button">
+                      Add to collection
+                    </button>
+                    <a
+                      href={`https://openlibrary.org/${book.key}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="learn-more-button btn mb-3"
+                      type="button"
+                    >
+                      Learn more
+                    </a>
                   </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     );
   } else {
     let url = "https://openlibrary.org/trending/now.json";
     axios.get(url).then(handleApiResponse);
+
+    return (
+      <div className="row justify-content-center">
+        <div className="col-2" id="loader">
+          <Circles
+            height="80"
+            width="80"
+            radius="9"
+            color="#7e6a80"
+            ariaLabel="three-dots-loading"
+            wrapperStyle
+            wrapperClass
+          />
+        </div>
+      </div>
+    );
   }
 }
