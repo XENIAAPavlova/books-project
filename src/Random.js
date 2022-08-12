@@ -20,7 +20,11 @@ export default function Random(props) {
 
         return (
           <div className="row justify-content-center">
-            <div className="card mb-3 mt-5 p-0" key={i}>
+            <div
+              className="card border-0 mb-3 mt-5 p-0"
+              id="random-card"
+              key={i}
+            >
               <div className="row g-0">
                 <div className="col-md-3">
                   <img
@@ -36,9 +40,11 @@ export default function Random(props) {
                       {book.title}
                     </p>
                     <h5 className="card-title">by {authors.join(", ")}</h5>
-                    <p>{book.description}</p>
+                    <p className="card-description mt-3" id="description">
+                      {book.description}
+                    </p>
                     <div className="row">
-                      <div className="col-5">
+                      <div className="col-3">
                         <button
                           id="trending-button"
                           type="submit"
@@ -47,7 +53,7 @@ export default function Random(props) {
                           Learn more
                         </button>
                       </div>
-                      <div className="col-5">
+                      <div className="col-3">
                         <button
                           id="trending-button"
                           type="submit"

@@ -73,21 +73,24 @@ export default function Home() {
               title: "To Kill a Mockingbird",
               cover_i: 12606502,
               author_name: ["Harper Lee"],
-              description: "",
+              description:
+                "To Kill a Mockingbird is a novel by the American author Harper Lee. It was published in 1960 and was instantly successful. In the United States, it is widely read in high schools and middle schools. To Kill a Mockingbird has become a classic of modern American literature, winning the Pulitzer Prize.",
             },
             {
               key: "/works/OL5819456W",
               title: "The Book Thief",
               cover_i: 8310846,
               author_name: ["Markus Zusak"],
-              description: "",
+              description:
+                "The Book Thief is a story narrated by a compassionate Death who tells us about Liesel, a girl growing up in Germany during World War II. She steals books, learns to read, and finds comfort in words. She and Max, the Jew her family protects, are the only main characters that survive the war.",
             },
             {
               key: "/works/OL25073891W",
               title: "Of Human Bondage",
               cover_i: 11996470,
               author_name: ["W. Somerset Maugham"],
-              description: "",
+              description:
+                "Of Human Bondage is a 1915 novel by W. Somerset Maugham. It traces the life and development of Philip Carey, and his formative, tortured and masochistic affair with Mildred, a waitress.",
             },
           ]}
         />
