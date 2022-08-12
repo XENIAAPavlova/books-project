@@ -1,78 +1,69 @@
-// import React from "react";
-// import "./Random.css";
+import React from "react";
+import "./Random.css";
 
-// export default function Random(props) {
-//   if (props.results)
-//   return (
-//     <div className="row justify-content-center mb-5">
-//       <div className="col-4 mb-5 mt-4">
-//         <div className="card border-0 h-100 box-shadow">
-//           {/* <img
-//           /> */}
-//           <div className="card-body">
-//             <h5 className="card-title text-center">The Hobbit</h5>
-//             {/* <p class="card-text text-center">
-//               Healthy foods can be easy AND yummy. Here are my 5 picks for
-//               glowing skin!
-//             </p> */}
-//             <div className="card-button btn-block text-center">
-//               <a
-//                 href="https://www.geekyposh.com/7-easy-foods-for-healthy-glowing-skin/"
-//                 target="blank"
-//                 className="btn btn-branding mt-3"
-//               >
-//                 Learn more
-//               </a>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//       <div className="col-4 mb-5 mt-4">
-//         <div className="card border-0 h-100 box-shadow">
-//           {/* <img
-//           /> */}
-//           <div className="card-body">
-//             <h5 className="card-title text-center">The Hobbit</h5>
-//             {/* <p class="card-text text-center">
-//               Face mists are everywhere, but not all are made equal. Find out
-//               which ones are worth the money and how to best use them in your
-//               skincare routine!
-//             </p> */}
-//             <div className="card-button btn-block text-center">
-//               <a
-//                 href="https://www.geekyposh.com/face-mists-101/"
-//                 target="blank"
-//                 className="btn btn-branding mt-3"
-//               >
-//                 Learn more
-//               </a>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//       <div className="col-4 mb-5 mt-4">
-//         <div className="card h-100 border-0 box-shadow">
-//           {/* <img
-//           /> */}
-//           <div className="card-body">
-//             <h5 className="card-title text-center">The Hobbit</h5>
-//             {/* <p class="card-text text-center">
-//               Sadly there is a lot of misinformation out there perpetuated by
-//               brands and influencers peddling their products, so I am here to
-//               set some records straight.
-//             </p> */}
-//             <div className="card-button btn-block text-center">
-//               <a
-//                 href="https://www.healthline.com/health/physical-vs-chemical-sunscreen"
-//                 target="blank"
-//                 className="btn btn-branding mt-3"
-//               >
-//                 Learn more
-//               </a>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
+export default function Random(props) {
+  return (
+    <div className="container ">
+      {props.results.slice(0, 10).map(function (book, i) {
+        console.log("hello");
+        console.log(book);
+
+        let authors = [];
+        if (book.author_name) {
+          authors = book.author_name;
+        }
+
+        let cover = "/no_cover_pic.png";
+        if (book.cover_i) {
+          cover = `https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`;
+        }
+
+        return (
+          <div className="row justify-content-center">
+            <div className="card mb-3 mt-5 p-0" key={i}>
+              <div className="row g-0">
+                <div className="col-md-3">
+                  <img
+                    id="random-book"
+                    src={cover}
+                    className="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div className="col-md-8">
+                  <div className="card-body">
+                    <p className="card-text fs-5" id="random-book-name">
+                      {book.title}
+                    </p>
+                    <h5 className="card-title">by {authors.join(", ")}</h5>
+                    <p>{book.description}</p>
+                    <div className="row">
+                      <div className="col-5">
+                        <button
+                          id="trending-button"
+                          type="submit"
+                          className="btn shadow-sm justify-content-md-end"
+                        >
+                          Learn more
+                        </button>
+                      </div>
+                      <div className="col-5">
+                        <button
+                          id="trending-button"
+                          type="submit"
+                          className="btn shadow-sm justify-content-md-end"
+                        >
+                          Add
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}

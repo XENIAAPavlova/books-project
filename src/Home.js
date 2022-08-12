@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import Intro from "./Intro";
 import BookResults from "./BookResults";
-
+import Random from "./Random";
 
 export default function Home() {
   let [keyword, setKeyword] = useState("");
@@ -58,31 +58,36 @@ export default function Home() {
       </section>
       <p className="random-text">Random picks</p>
       <section>
-        <BookResults
+        <Random
           results={[
             {
               key: "/works/OL5735363W",
               title: "The Hunger Games",
               cover_i: 12646545,
               author_name: ["Suzanne Collins"],
+              description:
+                "Katniss volunteers to replace her sister in a tournament that ends only when one participant remains. Pitted against contestants who have trained for this all their life, she has little to rely on.",
             },
             {
               key: "/works/OL3140834W",
               title: "To Kill a Mockingbird",
               cover_i: 12606502,
               author_name: ["Harper Lee"],
+              description: "",
             },
             {
               key: "/works/OL5819456W",
               title: "The Book Thief",
               cover_i: 8310846,
               author_name: ["Markus Zusak"],
+              description: "",
             },
             {
               key: "/works/OL25073891W",
               title: "Of Human Bondage",
               cover_i: 11996470,
               author_name: ["W. Somerset Maugham"],
+              description: "",
             },
           ]}
         />
