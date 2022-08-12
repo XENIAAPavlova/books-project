@@ -9,8 +9,13 @@
 }
 
 #random-book {
-border-radius: 4px;
+  border-radius: 4px;
   max-width: 100%;
   max-height: 300px;
   width: 175px;
+}
+
+#card-top {
+  height: 30vw;
+  width: 100%;
 }

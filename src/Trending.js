@@ -18,7 +18,7 @@ export default function Trending() {
     return (
       <div className="container ">
         <div className="row">
-          {results.slice(0, 6).map(function (book, i) {
+          {results.slice(0, 8).map(function (book, i) {
             console.log("hello");
             console.log(book);
 
@@ -28,8 +28,8 @@ export default function Trending() {
             }
 
             return (
-              <div className="col-md-2" key={i}>
-                <div className="card-main mb-5 mt-5 text-center">
+              <div className="col-md-3" key={i}>
+                <div className="card-body mb-5 mt-5 text-center">
                   <img
                     src={cover}
                     id="card-top"
@@ -40,7 +40,7 @@ export default function Trending() {
                   <p className="card-author mt-3">
                     by {book.author_name.join(", ")}
                   </p>
-                  <div className="col-md-12 text-center">
+                  <div className="col-md-12 text-center d-flex">
                     <button className="add-button btn mb-3 me-2" type="button">
                       Add to collection
                     </button>
