@@ -26,22 +26,30 @@ export default function Quotes() {
   }
 
   return (
-    <figure className="text-center">
-      <blockquote className="blockquote">
-        <p>{quote.content}</p>
-      </blockquote>
-      <figcaption className="blockquote-footer">
-        Someone famous in <cite title="Source Title">Source Title</cite>
-      </figcaption>
-      <div className="search-button">
-        <button
-          onClick={handleClick}
-          type="submit"
-          className="btn shadow-sm justify-content-md-end"
-        >
-          Another one
-        </button>
+    <div className="container min-vh-75 min-vw-75 d-flex flex-column justify-content-center p-5">
+      <div className="card shadow border-0 bg-body rounded">
+        <div className="row">
+          <div className="col-md-12 mb-5 mt-5">
+            <figure className="text-center">
+              <blockquote className="blockquote">
+                <p>{quote.content}</p>
+              </blockquote>
+              <figcaption className="blockquote-footer pt-3 pb-3">
+                {quote.author}
+              </figcaption>
+              <div className="search-button">
+                <button
+                  onClick={handleClick}
+                  type="submit"
+                  className="btn shadow-sm justify-content-md-end"
+                >
+                  Another one
+                </button>
+              </div>
+            </figure>
+          </div>
+        </div>
       </div>
-    </figure>
+    </div>
   );
 }
