@@ -5,6 +5,7 @@ import Trending from "./Trending";
 import Navigation from "./Navigation";
 import Home from "./Home";
 import MyCollection from "./MyCollection";
+import Quotes from "./Quotes";
 
 import "./App.css";
 
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/trending" element={<Trending />} />
           <Route path="/myCollection" element={<MyCollection />} />
+          <Route path="/quotes" element={<Quotes />} />
         </Routes>
       </BrowserRouter>
 

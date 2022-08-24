@@ -41,7 +41,9 @@ export default function Navigation() {
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link px-5">Quotes</a>
+              <Link className="nav-link px-5" to="/Quotes">
+                Quotes
+              </Link>
             </li>
           </ul>
         </div>
