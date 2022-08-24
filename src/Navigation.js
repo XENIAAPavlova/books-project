@@ -35,15 +35,8 @@ export default function Navigation() {
                 Trending
               </Link>
             </li>
-            <li className="nav-item dropdown">
-              <Link
-                className="nav-link px-5"
-                to="/myCollection"
-                id="navbarDropdownMenuLink"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
+            <li className="nav-item">
+              <Link className="nav-link px-5" to="/myCollection" role="button">
                 My Collection
               </Link>
             </li>
