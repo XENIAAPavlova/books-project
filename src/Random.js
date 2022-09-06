@@ -2,10 +2,14 @@ import React from "react";
 import "./Random.css";
 
 export default function Random(props) {
+  function addToCollection(item) {
+    console.log(`You added a book`);
+    console.log(item);
+  }
+
   return (
     <div className="container ">
       {props.results.slice(0, 10).map(function (book, i) {
-        console.log("hello");
         console.log(book);
 
         let authors = [];
@@ -19,7 +23,7 @@ export default function Random(props) {
         }
 
         return (
-          <div className="row justify-content-center">
+          <div key={i} className="row justify-content-center">
             <div
               className="card border-0 mb-3 mt-5 p-0"
               id="random-card"
@@ -54,7 +58,10 @@ export default function Random(props) {
                         </button>
                       </div>
                       <div className="col-3">
+                        {/* {props.results.map(function (book, i) {})}
+                        console.log(book); */}
                         <button
+                          onClick={() => addToCollection(book)}
                           id="trending-button"
                           type="submit"
                           className="btn shadow-sm justify-content-md-end"

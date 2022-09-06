@@ -8,6 +8,8 @@ export default function Home() {
   let [keyword, setKeyword] = useState("");
   let [results, setResults] = useState([]);
 
+
+
   function handleResponse(response) {
     console.log(response.data.docs);
     setResults(response.data.docs);
