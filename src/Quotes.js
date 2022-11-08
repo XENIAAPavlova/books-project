@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 // import axios from "axios";
 import "./Quotes.css";
 
@@ -15,10 +15,10 @@ export default function Quotes() {
     let url = "https://api.quotable.io/random";
     axios.get(url).then(handleResponse);
   }
-  useEffect(() => {
-    // @TODO Fired twice
-    updateQuote();
-  }, []);
+  // useEffect(() => {
+  //   // @TODO Fired twice
+  //   updateQuote();
+  // }, []);
 
   function handleClick(event) {
     event.preventDefault();
