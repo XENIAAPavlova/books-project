@@ -87,7 +87,7 @@ export default function Navigation() {
         </div>
         {user && (
           <div>
-            <img id="login-pic" src={user.picture}></img>
+            <img id="login-pic" alt="google-login-pic" src={user.picture}></img>
             <h3>{user.given_name}</h3>
           </div>
         )}
