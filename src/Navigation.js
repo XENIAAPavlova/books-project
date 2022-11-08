@@ -1,14 +1,36 @@
-import React, {useEffect} from "react"; 
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import "./Explore.css";
-
+import "./Navigation.css";
 import logo from "./Bookverse_logo.svg";
 import { Link } from "react-router-dom";
+import jwt_decode from "jwt-decode";
 
 export default function Navigation() {
+  const [user, setUser] = useState(null);
+
+  function handleCallbackResponse(response) {
+    var userObject = jwt_decode(response.credential);
+    console.log(userObject);
+    setUser(userObject);
+    document.getElementById("login-button").hidden = true;
+  }
+
+  function handleSignOut(event) {
+    setUser(null);
+    document.getElementById("login-button").hidden = false;
+  }
 
   useEffect(() => {
-
+    /* global google */
+    google.accounts.id.initialize({
+      client_id: process.env.REACT_APP_CLIENT_ID,
+      callback: handleCallbackResponse,
+    });
+    google.accounts.id.renderButton(document.getElementById("login-button"), {
+      theme: "outline",
+      size: "large",
+    });
   }, []);
 
   return (
@@ -51,10 +73,24 @@ export default function Navigation() {
               </Link>
             </li>
           </ul>
-          <button className="login-button" type="button" class="btn btn-light px-5 me-5">
-            Log In
-          </button>
+          <div id="login-button"></div>
+          {user && (
+            <button
+              id="signout-button"
+              type="button"
+              className="btn px-5"
+              onClick={(e) => handleSignOut(e)}
+            >
+              Sign Out
+            </button>
+          )}
         </div>
+        {user && (
+          <div>
+            <img id="login-pic" src={user.picture}></img>
+            <h3>{user.given_name}</h3>
+          </div>
+        )}
       </div>
     </nav>
   );
