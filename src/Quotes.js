@@ -27,12 +27,12 @@ export default function Quotes() {
 
   return (
     <div className="container min-vh-75 min-vw-75 d-flex flex-column justify-content-center p-5">
-      <div className="card shadow border-0 bg-body rounded">
+      <div className="card shadow border-0 bg-body rounded" id="card-quote">
         <div className="row">
           <div className="col-md-12 mb-5 mt-5">
             <figure className="text-center">
               <blockquote className="blockquote">
-                <p>{quote.content}</p>
+                <p id="quote-text">{quote.content}</p>
               </blockquote>
               <figcaption className="blockquote-footer pt-3 pb-3">
                 {quote.author}

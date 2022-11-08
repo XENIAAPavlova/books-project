@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Audio, Circles } from "react-loader-spinner";
+import { Circles } from "react-loader-spinner";
 
 import axios from "axios";
 import "./Trending.css";
@@ -12,6 +12,8 @@ export default function Trending() {
     console.log(response.data.works);
     setResults(response.data.works);
     setReady(true);
+
+  
   }
 
   if (ready) {
@@ -74,8 +76,6 @@ export default function Trending() {
             radius="9"
             color="#7e6a80"
             ariaLabel="three-dots-loading"
-            wrapperStyle
-            wrapperClass
           />
         </div>
       </div>

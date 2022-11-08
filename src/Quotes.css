@@ -1,12 +1,11 @@
-.card {
+#card-quote {
   background-color: #fcfbfa;
   border-color: #413b88;
   padding-top: 50px;
 }
 
-p {
+#quote-text {
   color: #413b88;
   margin: 10px;
   padding: 20px;
 }
-
