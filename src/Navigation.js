@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react"; 
 import "./App.css";
 import "./Explore.css";
 
@@ -6,6 +6,11 @@ import logo from "./Bookverse_logo.svg";
 import { Link } from "react-router-dom";
 
 export default function Navigation() {
+
+  useEffect(() => {
+
+  }, []);
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light ps-5 pe-5 mt-3">
       <div className="container-fluid">
@@ -46,6 +51,9 @@ export default function Navigation() {
               </Link>
             </li>
           </ul>
+          <button className="login-button" type="button" class="btn btn-light px-5 me-5">
+            Log In
+          </button>
         </div>
       </div>
     </nav>
