@@ -15,15 +15,7 @@ export default function Navigation() {
     setUser(userObject);
     document.getElementById("login-button").hidden = true;
 
-    window.localStorage.setItem(
-      "google_auth_user",
-      JSON.stringify({
-        email: userObject.email,
-        name: userObject.given_name,
-        family: userObject.family_name,
-        pic: userObject.picture,
-      })
-    );
+    window.localStorage.setItem("google_auth_user", JSON.stringify(userObject));
   }
 
   function handleSignOut(event) {
@@ -41,6 +33,11 @@ export default function Navigation() {
       theme: "outline",
       size: "large",
     });
+    // fetch user data
+    let userObject = JSON.parse(
+      window.localStorage.getItem("google_auth_user")
+    );
+    setUser(userObject);
   }, []);
 
   return (
@@ -83,7 +80,7 @@ export default function Navigation() {
               </Link>
             </li>
           </ul>
-          <div id="login-button"></div>
+          {!user && <div id="login-button"></div>}
           {user && (
             <button
               id="signout-button"
