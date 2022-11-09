@@ -14,6 +14,16 @@ export default function Navigation() {
     console.log(userObject);
     setUser(userObject);
     document.getElementById("login-button").hidden = true;
+
+    window.localStorage.setItem(
+      "google_auth_user",
+      JSON.stringify({
+        email: userObject.email,
+        name: userObject.given_name,
+        family: userObject.family_name,
+        pic: userObject.picture,
+      })
+    );
   }
 
   function handleSignOut(event) {
