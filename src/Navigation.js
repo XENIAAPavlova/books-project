@@ -19,6 +19,7 @@ export default function Navigation() {
 
   function handleSignOut(event) {
     setUser(null);
+    window.localStorage.removeItem("google_auth_user");
   }
 
   useEffect(() => {
@@ -78,7 +79,7 @@ export default function Navigation() {
               </Link>
             </li>
           </ul>
-          <div id="login-button" style={{ display: user ? 'none' : ''}}></div>
+          <div id="login-button" style={{ display: user ? "none" : "" }}></div>
           {user && (
             <button
               id="signout-button"
