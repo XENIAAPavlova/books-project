@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Random.css";
 
 export default function Random(props) {
+  const [item, setItem] = useState([]);
+
   function addToCollection(item) {
     console.log(`You added a book`);
     console.log(item);
+
+    let book_item = window.localStorage.getItem("get_item") || "";
+    let new_book_item = book_item + item.key;
+    window.localStorage.setItem("get_item", new_book_item);
   }
 
   return (
