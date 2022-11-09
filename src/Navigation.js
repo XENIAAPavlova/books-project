@@ -13,14 +13,12 @@ export default function Navigation() {
     var userObject = jwt_decode(response.credential);
     console.log(userObject);
     setUser(userObject);
-    document.getElementById("login-button").hidden = true;
 
     window.localStorage.setItem("google_auth_user", JSON.stringify(userObject));
   }
 
   function handleSignOut(event) {
     setUser(null);
-    document.getElementById("login-button").hidden = false;
   }
 
   useEffect(() => {
@@ -80,7 +78,7 @@ export default function Navigation() {
               </Link>
             </li>
           </ul>
-          {!user && <div id="login-button"></div>}
+          <div id="login-button" style={{ display: user ? 'none' : ''}}></div>
           {user && (
             <button
               id="signout-button"
