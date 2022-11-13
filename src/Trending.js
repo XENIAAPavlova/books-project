@@ -12,8 +12,6 @@ export default function Trending() {
     console.log(response.data.works);
     setResults(response.data.works);
     setReady(true);
-
-  
   }
 
   if (ready) {
@@ -40,7 +38,7 @@ export default function Trending() {
                   />
                   <p className="card-book mb-2 mt-4">{book.title}</p>
                   <p className="card-author mt-3">
-                    by {book.author_name.join(", ")}
+                    by {(book.author_name || []).join(", ")}
                   </p>
                   <div className="col-md-12 text-center d-flex">
                     <button className="add-button btn mb-3 me-2" type="button">
