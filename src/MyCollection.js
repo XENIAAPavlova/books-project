@@ -6,6 +6,33 @@ export default function MyCollection() {
     window.localStorage.getItem("userBookCollection")
   );
 
+  function removeBook(item) {
+    console.log(`The book is removed`);
+    console.log(item);
+
+    let userBookCollection =
+      JSON.parse(window.localStorage.getItem("userBookCollection")) || [];
+
+    //
+    //
+    //
+
+    let itemIndex = userBookCollection.findIndex(function (element) {
+      /* … */
+      return element.key == item.key;
+    });
+    userBookCollection.splice(itemIndex, 1);
+    //
+    //
+    //
+    console.log(userBookCollection);
+
+    window.localStorage.setItem(
+      "userBookCollection",
+      JSON.stringify([...new Set(userBookCollection)])
+    );
+  }
+
   if (bookCollection) {
     return (
       <div className="container">
@@ -36,6 +63,7 @@ export default function MyCollection() {
                     <p className="card-author mt-3">{author}</p>
                     <div className="col-md-12 text-center">
                       <button
+                        onClick={() => removeBook(book)}
                         className="add-button btn mb-3 me-2"
                         type="button"
                       >
