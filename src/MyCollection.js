@@ -1,12 +1,46 @@
 import React from "react";
 import "./MyCollection.css";
 
-export default function MyCollection(props) {
-  if (props.results) {
+export default function MyCollection() {
+  let bookCollection = [
+                  {
+                    key: "/works/OL5735363W",
+                    title: "The Hunger Games",
+                    cover_i: 12646545,
+                    author_name: ["Suzanne Collins"],
+                    description:
+                      "Katniss volunteers to replace her sister in a tournament that ends only when one participant remains. Pitted against contestants who have trained for this all their life, she has little to rely on.",
+                  },
+                  {
+                    key: "/works/OL3140834W",
+                    title: "To Kill a Mockingbird",
+                    cover_i: 12606502,
+                    author_name: ["Harper Lee"],
+                    description:
+                      "To Kill a Mockingbird is a novel by the American author Harper Lee. It was published in 1960 and was instantly successful. In the United States, it is widely read in high schools and middle schools. To Kill a Mockingbird has become a classic of modern American literature, winning the Pulitzer Prize.",
+                  },
+                  {
+                    key: "/works/OL5819456W",
+                    title: "The Book Thief",
+                    cover_i: 8310846,
+                    author_name: ["Markus Zusak"],
+                    description:
+                      "The Book Thief is a story narrated by a compassionate Death who tells us about Liesel, a girl growing up in Germany during World War II. She steals books, learns to read, and finds comfort in words. She and Max, the Jew her family protects, are the only main characters that survive the war.",
+                  },
+                  {
+                    key: "/works/OL25073891W",
+                    title: "Of Human Bondage",
+                    cover_i: 11996470,
+                    author_name: ["W. Somerset Maugham"],
+                    description:
+                      "Of Human Bondage is a 1915 novel by W. Somerset Maugham. It traces the life and development of Philip Carey, and his formative, tortured and masochistic affair with Mildred, a waitress.",
+                  },
+                ]
+  if (bookCollection) {
     return (
       <div className="container">
         <div className="row">
-          {props.results.map(function (book, i) {
+          {bookCollection.map(function (book, i) {
             let author = [];
             if (book.author_name) {
               author = book.author_name;
