@@ -1,25 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Random.css";
+import AddToCollectionButton from "./AddToCollectionButton";
 
 export default function Random(props) {
-  const [myBooks, setMyBooks] = useState([]);
-
-  function addToCollection(item) {
-    console.log(`You added a book`);
-    console.log(item);
-
-    let userBookCollection =
-      JSON.parse(window.localStorage.getItem("userBookCollection")) || [];
-    userBookCollection.push(item);
-
-    console.log(userBookCollection);
-
-    window.localStorage.setItem(
-      "userBookCollection",
-      JSON.stringify(userBookCollection)
-    );
-  }
-
   return (
     <div className="container ">
       {props.results.slice(0, 10).map(function (book, i) {
@@ -71,16 +54,7 @@ export default function Random(props) {
                         </button>
                       </div>
                       <div className="col-3">
-                        {/* {props.results.map(function (book, i) {})}
-                        console.log(book); */}
-                        <button
-                          onClick={() => addToCollection(book)}
-                          id="trending-button"
-                          type="submit"
-                          className="btn shadow-sm justify-content-md-end"
-                        >
-                          Add
-                        </button>
+                        <AddToCollectionButton book={book} />
                       </div>
                     </div>
                   </div>

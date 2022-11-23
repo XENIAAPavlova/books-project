@@ -36,7 +36,10 @@ export default function BookResults(props) {
                         </p>
                         <div className="row">
                           <div className="col-sm-12 text-center">
-                            <AddToCollectionButton inlineRender={true} />
+                            <AddToCollectionButton
+                              inlineRender={true}
+                              book={book}
+                            />
                             <a
                               href={`https://openlibrary.org/${book.key}`}
                               target="_blank"

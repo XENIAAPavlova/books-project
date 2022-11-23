@@ -42,7 +42,7 @@ export default function Trending() {
                     by {(book.author_name || []).join(", ")}
                   </p>
                   <div className="col-md-12 text-center d-flex justify-content-center">
-                    <AddToCollectionButton inlineRender={true} />
+                    <AddToCollectionButton inlineRender={true} book={book} />
                     <a
                       href={`https://openlibrary.org/${book.key}`}
                       target="_blank"
