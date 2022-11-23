@@ -40,9 +40,9 @@ export default function Trending() {
                   <p className="card-author mt-3">
                     by {(book.author_name || []).join(", ")}
                   </p>
-                  <div className="col-md-12 text-center d-flex">
+                  <div className="col-md-12 text-center d-flex justify-content-center">
                     <button className="add-button btn mb-3 me-2" type="button">
-                      Add to collection
+                      Add
                     </button>
                     <a
                       href={`https://openlibrary.org/${book.key}`}
@@ -51,7 +51,7 @@ export default function Trending() {
                       className="learn-more-button btn mb-3"
                       type="button"
                     >
-                      Learn more
+                      Info
                     </a>
                   </div>
                 </div>
