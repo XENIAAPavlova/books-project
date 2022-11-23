@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Circles } from "react-loader-spinner";
+import AddToCollectionButton from "./AddToCollectionButton";
 
 import axios from "axios";
 import "./Trending.css";
@@ -41,9 +42,7 @@ export default function Trending() {
                     by {(book.author_name || []).join(", ")}
                   </p>
                   <div className="col-md-12 text-center d-flex justify-content-center">
-                    <button className="add-button btn mb-3 me-2" type="button">
-                      Add
-                    </button>
+                    <AddToCollectionButton inlineRender={true} />
                     <a
                       href={`https://openlibrary.org/${book.key}`}
                       target="_blank"

@@ -1,5 +1,6 @@
 import React from "react";
 import "./BookResults.css";
+import AddToCollectionButton from "./AddToCollectionButton";
 
 export default function BookResults(props) {
   if (props.results) {
@@ -35,12 +36,7 @@ export default function BookResults(props) {
                         </p>
                         <div className="row">
                           <div className="col-sm-12 text-center">
-                            <button
-                              className="add-button btn mb-3 me-2"
-                              type="button"
-                            >
-                              Add to collection
-                            </button>
+                            <AddToCollectionButton inlineRender={true} />
                             <a
                               href={`https://openlibrary.org/${book.key}`}
                               target="_blank"
