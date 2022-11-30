@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./AddToCollectionButton.css";
 
 export default function AddToCollectionButton(props) {
+  const [buttonText, setButtonText] = useState("Add");
+
   function addToCollection(item) {
+    setButtonText("Added");
     console.log(`You added a book`);
     console.log(item);
 
@@ -29,7 +32,7 @@ export default function AddToCollectionButton(props) {
         type="submit"
         className="add-button btn mb-3 me-2"
       >
-        Add
+        {buttonText}
       </button>
     );
   } else {
@@ -40,7 +43,7 @@ export default function AddToCollectionButton(props) {
         type="submit"
         className="btn shadow-sm justify-content-md-end"
       >
-        Add
+        {buttonText}
       </button>
     );
   }
