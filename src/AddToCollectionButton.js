@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import "./AddToCollectionButton.css";
 
 export default function AddToCollectionButton(props) {
@@ -6,6 +7,11 @@ export default function AddToCollectionButton(props) {
 
   function addToCollection(item) {
     setButtonText("Added");
+
+    setTimeout(() => {
+      setButtonText("Add");
+    }, 1000);
+
     console.log(`You added a book`);
     console.log(item);
 
