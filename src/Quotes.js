@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // import axios from "axios";
 import "./Quotes.css";
 
@@ -15,10 +15,10 @@ export default function Quotes() {
     let url = "https://api.quotable.io/random";
     axios.get(url).then(handleResponse);
   }
-  // useEffect(() => {
-  //   // @TODO Fired twice
-  //   updateQuote();
-  // }, []);
+  useEffect(() => {
+    // @TODO Fired twice
+    updateQuote();
+  }, []);
 
   function handleClick(event) {
     event.preventDefault();
@@ -32,7 +32,7 @@ export default function Quotes() {
           <div className="col-md-12 mb-5 mt-5">
             <figure className="text-center">
               <blockquote className="blockquote">
-                <p id="quote-text">{quote.content}</p>
+                <p id="quote-text">"{quote.content}"</p>
               </blockquote>
               <figcaption className="blockquote-footer pt-3 pb-3">
                 {quote.author}
