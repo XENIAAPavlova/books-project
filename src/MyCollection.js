@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./MyCollection.css";
 
 export default function MyCollection() {
-  let bookCollection = JSON.parse(
-    window.localStorage.getItem("userBookCollection")
+  let [bookCollection, setBookCollection] = useState(
+    JSON.parse(window.localStorage.getItem("userBookCollection"))
   );
 
   function removeBook(item) {
@@ -18,19 +18,18 @@ export default function MyCollection() {
     //
 
     let itemIndex = userBookCollection.findIndex(function (element) {
-      /* … */
       return element.key == item.key;
     });
     userBookCollection.splice(itemIndex, 1);
     //
     //
     //
-    console.log(userBookCollection);
-
     window.localStorage.setItem(
       "userBookCollection",
-      JSON.stringify([...new Set(userBookCollection)])
+      JSON.stringify(userBookCollection)
     );
+
+    setBookCollection(userBookCollection);
   }
 
   if (bookCollection) {
