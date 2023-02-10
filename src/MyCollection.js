@@ -18,7 +18,7 @@ export default function MyCollection() {
     //
 
     let itemIndex = userBookCollection.findIndex(function (element) {
-      return element.key == item.key;
+      return element.key === item.key;
     });
     userBookCollection.splice(itemIndex, 1);
     //

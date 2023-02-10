@@ -17,7 +17,7 @@ export default function Quotes() {
   }
   useEffect(() => {
     // @TODO Fired twice
-    updateQuote();
+    updateQuote(); // eslint-disable-next-line
   }, []);
 
   function handleClick(event) {

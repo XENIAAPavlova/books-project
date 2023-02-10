@@ -7,9 +7,17 @@ import Home from "./Home";
 import MyCollection from "./MyCollection";
 import Quotes from "./Quotes";
 
+
 import "./App.css";
 
 export default function App() {
+  // const [item, setItem] = useState("");
+  // const [items, setItems] = useState(JSON.parse(localStorage.getItem("items")));
+
+  // useEffect(() => {
+  //   localStorage.setItem("items", JSON.stringify(items));
+  // }, [items]);
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -24,7 +32,7 @@ export default function App() {
 
       <footer className="App-footer">
         <small>
-          This is an open-source code by
+          This is an open-source code by 
           <a
             href="https://github.com/XENIAAPavlova"
             target="blank"
